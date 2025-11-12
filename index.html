@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Timeless Treasures — Relojería y Joyería Fina en Puebla</title>
+  <meta name="description" content="Relojes selectos, joyería fina y taller especializado en Puebla. Calidad, garantía y atención personalizada." />
+  <link rel="canonical" href="https://www.timelesstreasures.com.mx/" />
+  <meta name="theme-color" content="#0f172a" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="robots" content="index,follow" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Timeless Treasures — Relojería y Joyería Fina" />
+  <meta property="og:description" content="Relojes selectos, joyería fina y taller especializado en Puebla." />
+  <!-- MODIFICADO: Ruta a tu imagen de logo local -->
+  <meta property="og:image" content="images/LOGO.jpg" />
+  <meta property="og:url" content="https://www.timelesstreasures.com.mx/" />
+  <meta property="og:locale" content="es_MX" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- NOTA: Estas rutas de favicon siguen siendo relativas a la raíz del sitio (/) -->
+  <!-- Si también las tienes localmente, deberías cambiarlas a, por ej., "favicon.ico" -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+  <link rel="preload" as="image" href="https://source.unsplash.com/1920x1080/?luxury,watch" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet"/>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter','ui-sans-serif','system-ui','-apple-system'],
+            display: ['Playfair Display','serif']
+          },
+          colors: {
+            // Paleta de acento 'Amber' (Dorado/Naranja)
+            accent: { 50:'#fffbeb',100:'#fef3c7',200:'#fde68a',300:'#fcd34d',400:'#fbbf24',500:'#f59e0b',600:'#d97706',700:'#b45309',800:'#92400e',900:'#78350f' }
+          },
+          boxShadow: { soft: '0 12px 32px -12px rgba(0,0,0,.15)'}
+        }
+      }
+    }
+  </script>
+
+  <style>
+    :root{ --header-h:72px; --accent:#f59e0b }
+    html:focus-within{ scroll-behavior:smooth }
+    :target{ scroll-margin-top: calc(var(--header-h) + 24px) }
+    
+    :focus-visible{ outline:3px solid var(--accent); outline-offset:2px; border-radius:4px }
+    
+    /* Respeta la reducción de movimiento */
+    @media (prefers-reduced-motion: reduce){ 
+      html{ scroll-behavior:auto } 
+      .motion-safe{ transition:none!important; animation:none!important } 
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+  
+  <div class="bg-slate-900 text-slate-200 text-xs font-medium">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-2 flex items-center justify-between gap-4">
+      <p class="truncate">
+        <span class="hidden sm:inline">Envío gratis desde $1,499 MXN</span>
+        <span class="sm:hidden">Envío gratis +$1,499</span>
+        <span class="mx-2 text-slate-600">|</span>
+        <span>12 MSI en piezas seleccionadas</span>
+      </p>
+      <a href="#faq" class="underline underline-offset-2 hover:text-white transition-colors">Preguntas frecuentes</a>
+    </div>
+  </div>
+
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-200" style="height:var(--header-h)">
+    <nav class="max-w-7xl mx-auto h-full px-4 sm:px-6 flex items-center gap-6" aria-label="Principal">
+      
+      <a href="#inicio" class="flex items-center gap-3 group" aria-label="Timeless Treasures - Ir al inicio">
+        <!-- MODIFICADO: Ruta a tu imagen de logo local -->
+        <!-- RECUERDA: Renombrar 'LOGO .jpg' a 'LOGO.jpg' en tu carpeta -->
+        <img 
+          src="images/LOGO.jpg" 
+          alt="Logo Timeless Treasures" 
+          class="h-10 w-auto rounded-md ring-1 ring-slate-200 object-contain" 
+          onerror="this.src='https://placehold.co/160x160/0f172a/ffffff?text=TT+Logo';this.onerror=null;"
+        />
+        <span class="font-display text-lg md:text-xl tracking-tight text-slate-900 group-hover:text-slate-600 transition-colors motion-safe">
+          Timeless Treasures
+        </span>
+      </a>
+
+      <button id="btnMenu" class="ml-auto md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg border border-slate-300 text-slate-700" aria-controls="mobileNav" aria-expanded="false" aria-label="Abrir menú">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+
+      <ul id="mainNav" class="hidden md:flex ml-auto items-center gap-1 text-sm font-medium">
+        <li><a class="nav-link" href="#filosofia">Filosofía</a></li>
+        <li><a class="nav-link" href="#destacados">Destacados</a></li>
+        <li><a class="nav-link" href="#taller">Taller</a></li>
+        <li><a class="nav-link" href="#marcas">Marcas</a></li>
+        <li><a class="nav-link" href="#faq">FAQ</a></li>
+        <li>
+          <a href="#contacto" class="ml-2 inline-flex items-center gap-2 rounded-lg bg-slate-900 text-white px-4 py-2 hover:bg-slate-700 transition-colors motion-safe">
+            Contacto
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4"><path d="M1.5 4.5A1.5 1.5 0 0 1 3 3h18a1.5 1.5 0 0 1 1.5 1.5v15A1.5 1.5 0 0 1 21 21H3a1.5 1.5 0 0 1-1.5-1.5v-15Zm2.12.5 7.89 6.49a1.5 1.5 0 0 0 1.88 0l7.89-6.49H3.62ZM21 6.92l-6.86 5.65a3.5 3.5 0 0 1-4.28 0L3 6.92V19.5h18V6.92Z"/></svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    
+    <div id="mobileNav" class="md:hidden hidden absolute top-[var(--header-h)] left-0 w-full bg-white border-t border-slate-200 shadow-xl" role="dialog" aria-label="Menú móvil">
+      <div class="px-4 py-5 flex flex-col gap-2">
+        <a href="#filosofia" class="mobile-link">Filosofía</a>
+        <a href="#destacados" class="mobile-link">Destacados</a>
+        <a href="#taller" class="mobile-link">Taller</a>
+        <a href="#marcas" class="mobile-link">Marcas</a>
+        <a href="#faq" class="mobile-link">FAQ</a>
+        <a href="#contacto" class="mt-2 text-center mobile-link font-semibold text-white bg-slate-900 rounded-lg hover:bg-slate-700">Contacto</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="inicio">
+    
+    
+    <section class="relative min-h-[75vh] md:min-h-[85vh] grid place-items-center text-white">
+      <!-- NOTA: Esta imagen de fondo sigue siendo de Unsplash. Cámbiala si tienes una imagen de fondo local -->
+      <img 
+        src="https://source.unsplash.com/1920x1080/?luxury,watch" 
+        alt="Fotografía de alta relojería y joyería fina" 
+        class="absolute inset-0 w-full h-full object-cover -z-10" 
+        loading="eager"
+      />
+      <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60"></div>
+      
+      <div class="relative z-10 px-6 text-center max-w-4xl">
+        <p class="text-lg md:text-xl uppercase tracking-widest text-accent-400 font-medium">Timeless Treasures</p>
+        <h1 class="mt-2 text-5xl md:text-7xl font-display font-bold tracking-tight text-white">
+          Artesanía Atemporal. Lujo Moderno.
+        </h1>
+        <p class="mt-6 max-w-2xl mx-auto text-lg text-slate-100">
+          La perfecta armonía entre el tiempo y el tesoro que dura para siempre. Descubre nuestra curaduría en Puebla.
+        </p>
+        <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
+          <a href="#destacados" class="px-6 py-3 rounded-lg bg-white text-slate-900 font-semibold hover:bg-slate-200 transition-colors motion-safe">Ver colección</a>
+          <a href="#contacto" class="px-6 py-3 rounded-lg ring-2 ring-white/80 hover:bg-white/10 transition-colors motion-safe">Agendar visita</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="filosofia" class="py-20 lg:py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="max-w-3xl mx-auto text-center">
+          <h2 class="text-4xl font-display font-bold text-slate-900">Nuestra Filosofía</h2>
+          <p class="mt-4 text-lg text-slate-600">Excelencia, confianza y un diseño que trasciende el tiempo.</p>
+        </div>
+        
+        <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+          <article class="bg-white border border-slate-200 rounded-2xl p-8 shadow-soft">
+            <h3 class="text-2xl font-display font-semibold text-slate-900">Misión</h3>
+            <p class="mt-3 text-slate-700">Ofrecer relojería selecta y joyería fina con asesoría honesta y servicio de taller confiable, para celebrar historias y momentos que trascienden.</p>
+          </article>
+          <article class="bg-white border border-slate-200 rounded-2xl p-8 shadow-soft">
+            <h3 class="text-2xl font-display font-semibold text-slate-900">Visión</h3>
+            <p class="mt-3 text-slate-700">Ser el referente en Puebla por curaduría de marcas, acabados impecables y una experiencia de compra cálida, moderna y personalizada.</p>
+          </article>
+          <article class="bg-white border border-slate-200 rounded-2xl p-8 shadow-soft">
+            <h3 class="text-2xl font-display font-semibold text-slate-900">Valores</h3>
+            <ul class="mt-3 text-slate-700 list-disc list-inside space-y-1">
+              <li>Calidad y autenticidad</li>
+              <li>Atención personalizada</li>
+              <li>Transparencia y garantía</li>
+              <li>Diseño atemporal</li>
+              <li>Responsabilidad con el cliente</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="destacados" class="py-20 lg:py-24 bg-slate-100">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="max-w-3xl mx-auto text-center">
+          <h2 class="text-4xl font-display font-bold text-slate-900">Joyas Destacadas</h2>
+          <p class="mt-4 text-lg text-slate-600">Una selección curada de nuestras piezas más icónicas.</p>
+        </div>
+        
+        <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <!-- MODIFICADO: Producto 1 con tu imagen -->
+          <article class="bg-white rounded-2xl shadow-soft overflow-hidden group" itemscope itemtype="https://schema.org/Product">
+            <img 
+              src="images/ANILLO.jpeg" 
+              alt="Anillo de compromiso 'Eterno'" 
+              class="w-full h-60 object-cover group-hover:scale-105 transition-transform duration-300 motion-safe" 
+              loading="lazy" decoding="async" itemprop="image"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-display font-semibold text-slate-900" itemprop="name">Anillo "Eterno"</h3>
+              <p class="mt-2 text-slate-700 text-sm" itemprop="description">Diamante corte brillante sobre oro blanco de 18k. Un clásico redefinido.</p>
+              <div class="mt-4 text-lg font-semibold text-slate-900" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                <meta itemprop="priceCurrency" content="MXN" />
+                $<span itemprop="price">45000</span> MXN
+              </div>
+            </div>
+          </article>
+          
+          <!-- MODIFICADO: Producto 2 con tu imagen -->
+          <article class="bg-white rounded-2xl shadow-soft overflow-hidden group" itemscope itemtype="https://schema.org/Product">
+            <img 
+              src="images/RELOJ CRONOGRAFO.png" 
+              alt="Reloj cronógrafo 'Piloto'" 
+              class="w-full h-60 object-cover group-hover:scale-105 transition-transform duration-300 motion-safe" 
+              loading="lazy" decoding="async" itemprop="image"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-display font-semibold text-slate-900" itemprop="name">Cronógrafo "Piloto"</h3>
+              <p class="mt-2 text-slate-700 text-sm" itemprop="description">Movimiento automático suizo, caja de acero 316L y cristal de zafiro.</p>
+              <div class="mt-4 text-lg font-semibold text-slate-900" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                <meta itemprop="priceCurrency" content="MXN" />
+                $<span itemprop="price">28900</span> MXN
+              </div>
+            </div>
+          </article>
+          
+          <!-- MODIFICADO: Producto 3 con tu imagen -->
+          <article class="bg-white rounded-2xl shadow-soft overflow-hidden group" itemscope itemtype="https://schema.org/Product">
+            <img 
+              src="images/COLLAR.png" 
+              alt="Collar 'Cielo' de zafiro y diamantes" 
+              class="w-full h-60 object-cover group-hover:scale-105 transition-transform duration-300 motion-safe" 
+              loading="lazy" decoding="async" itemprop="image"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-display font-semibold text-slate-900" itemprop="name">Collar "Cielo"</h3>
+              <p class="mt-2 text-slate-700 text-sm" itemprop="description">Zafiro central rodeado de diamantes, montado en platino. Elegancia pura.</p>
+              <div class="mt-4 text-lg font-semibold text-slate-900" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                <meta itemprop="priceCurrency" content="MXN" />
+                $<span itemprop="price">62500</span> MXN
+              </div>
+            </div>
+          </article>
+        </div>
+        
+        <div class="mt-12 text-center">
+          <a href="#contacto" class="inline-flex items-center gap-2 rounded-lg bg-accent-500 hover:bg-accent-600 text-white px-6 py-3 font-semibold transition-colors motion-safe">
+            Solicitar catálogo completo
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="taller" class="py-20 lg:py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="max-w-3xl mx-auto text-center">
+          <h2 class="text-4xl font-display font-bold text-slate-900">Taller & Servicios</h2>
+          <p class="mt-4 text-lg text-slate-600">Cuidamos de tus tesoros con técnicos especializados y la última tecnología.</p>
+        </div>
+        
+        <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+          <article class="border border-slate-200 rounded-2xl p-8 text-center">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 mx-auto text-accent-500"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5 14.25 3a2.25 2.25 0 0 1 3.182 0l2.25 2.25a2.25 2.25 0 0 1 0 3.182L9.75 21.75H3.75v-8.25Z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" /></svg>
+            <h3 class="mt-4 text-xl font-display font-semibold">Mantenimiento</h3>
+            <p class="mt-2 text-slate-700">Servicio completo a automáticos, reemplazo de empaques y hermeticidad.</p>
+          </article>
+          <article class="border border-slate-200 rounded-2xl p-8 text-center">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 mx-auto text-accent-500"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15.91 11.672a.375.375 0 0 1 0 .656l-5.603 3.113a.375.375 0 0 1-.557-.328V8.887c0-.286.357-.467.557-.328l5.603 3.113Z" /></svg>
+            <h3 class="mt-4 text-xl font-display font-semibold">Cambio de Batería</h3>
+            <p class="mt-2 text-slate-700">Diagnóstico, reemplazo con baterías suizas y prueba de funcionamiento.</p>
+          </article>
+          <article class="border border-slate-200 rounded-2xl p-8 text-center">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 mx-auto text-accent-500"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.83-5.83M11.42 15.17l.17.17M11.42 15.17 7.37 11.13l6.53-6.53M7.37 11.13l-6.23-6.23a.659.659 0 0 0-1.12 0l-1.12 1.12a.659.659 0 0 0 0 1.12l6.23 6.23M7.37 11.13l.17.17M11.42 15.17.17.17" /></svg>
+            <h3 class="mt-4 text-xl font-display font-semibold">Ajuste y Limpieza</h3>
+            <p class="mt-2 text-slate-700">Pulido profesional, limpieza ultrasónica y ajuste de brazaletes y tallas.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="marcas" class="py-20 lg:py-24 bg-slate-900 text-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <h2 class="text-3xl font-display font-bold text-center">Marcas de Prestigio</h2>
+        <p class="mt-3 text-slate-300 text-center max-w-2xl mx-auto">Distribuidores autorizados y curaduría de las mejores casas relojeras y de joyería.</p>
+        
+        <div class="mt-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-x-6 gap-y-10">
+          <div class="grayscale hover:grayscale-0 transition-all motion-safe text-center font-display text-2xl text-slate-500 hover:text-white">Cartier</div>
+          <div class="grayscale hover:grayscale-0 transition-all motion-safe text-center font-display text-2xl text-slate-500 hover:text-white">Swarosvski</div>
+          <div class="grayscale hover:grayscale-0 transition-all motion-safe text-center font-display text-2xl text-slate-500 hover:text-white">Hamilton</div>
+          <div class="grayscale hover:grayscale-0 transition-all motion-safe text-center font-display text-2xl text-slate-500 hover:text-white">Omega</div>
+          <div class="grayscale hover:grayscale-0 transition-all motion-safe text-center font-display text-2xl text-slate-500 hover:text-white">Piaget</div>
+          <div class="grayscale hover:grayscale-0 transition-all motion-safe text-center font-display text-2xl text-slate-500 hover:text-white">Guvier</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonios" class="py-20 lg:py-24 bg-slate-100">
+      <div class="max-w-7xl mx-auto px-6">
+        <h2 class="text-4xl font-display font-bold text-slate-900 text-center">Lo que dicen nuestros clientes</h2>
+        
+        <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+          <figure class="bg-white border border-slate-200 rounded-2xl p-8 shadow-soft">
+            <blockquote class="text-lg text-slate-700">“Compré un reloj para mi aniversario y la asesoría fue impecable. Conocen cada pieza a detalle. 100% recomendable.”</blockquote>
+            <figcaption class="mt-5 text-sm text-slate-500">— Laura G.</figcaption>
+          </figure>
+          <figure class="bg-white border border-slate-200 rounded-2xl p-8 shadow-soft">
+            <blockquote class="text-lg text-slate-700">“La limpieza de mi anillo de compromiso quedó perfecta, parece nuevo. El servicio de taller es rápido y muy profesional.”</blockquote>
+            <figcaption class="mt-5 text-sm text-slate-500">— Daniel R.</figcaption>
+          </figure>
+          <figure class="bg-white border border-slate-200 rounded-2xl p-8 shadow-soft">
+            <blockquote class="text-lg text-slate-700">“Excelente curaduría de marcas, garantía y trato. La mejor joyería de Puebla para piezas especiales, sin duda.”</blockquote>
+            <figcaption class="mt-5 text-sm text-slate-500">— Sofía M.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="py-20 lg:py-24 bg-white">
+      <div class="max-w-4xl mx-auto px-6">
+        <h2 class="text-4xl font-display font-bold text-slate-900 text-center">Preguntas frecuentes</h2>
+        
+        <div class="mt-12 divide-y divide-slate-200 border border-slate-200 rounded-2xl overflow-hidden">
+          <details class="group p-6" open>
+            <summary class="flex cursor-pointer list-none items-center justify-between font-semibold text-slate-900">
+              ¿Todas las piezas son auténticas y ofrecen garantía?
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 text-slate-500 transition-transform duration-200 group-open:rotate-180 motion-safe"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" /></svg>
+            </summary>
+            <p class="mt-3 text-slate-700">Absolutamente. Somos distribuidores autorizados y todas nuestras piezas son 100% auténticas. Ofrecemos garantía por escrito del fabricante y de nuestra tienda. El taller ofrece garantía sobre mano de obra.</p>
+          </details>
+          <details class="group p-6">
+            <summary class="flex cursor-pointer list-none items-center justify-between font-semibold text-slate-900">
+              ¿Hacen piezas personalizadas o grabados?
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 text-slate-500 transition-transform duration-200 group-open:rotate-180 motion-safe"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" /></svg>
+            </summary>
+            <p class="mt-3 text-slate-700">Realizamos ajustes de talla y opciones de grabado láser y manual. Para diseños a medida (joyería), podemos cotizar sin compromiso con nuestros maestros orfebres.</p>
+          </details>
+          <details class="group p-6">
+            <summary class="flex cursor-pointer list-none items-center justify-between font-semibold text-slate-900">
+              ¿Cuál es el tiempo de servicio del taller?
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 text-slate-500 transition-transform duration-200 group-open:rotate-180 motion-safe"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" /></svg>
+            </summary>
+            <p class="mt-3 text-slate-700">Ajustes menores (cambio de batería, ajuste de brazalete) pueden estar listos el mismo día. Mantenimientos completos o pulidos pueden tomar de 3 a 7 días hábiles, según la carga de trabajo y el diagnóstico de la pieza.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="py-20 lg:py-24 bg-slate-900 text-white">
+      <div class="max-w-7xl mx-auto px-6 text-center">
+        <h2 class="text-4xl font-display font-bold">Visítanos en Puebla</h2>
+        <p class="mt-4 text-lg text-slate-300 max-w-2xl mx-auto">Estamos listos para brindarte una experiencia personalizada. Agenda tu cita, envíanos un mensaje o visítanos.</p>
+        
+        <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto text-left">
+          <div class="bg-slate-800 rounded-xl p-6 ring-1 ring-slate-700">
+            <h3 class="font-semibold text-accent-400">Dirección</h3>
+            <p class="mt-1 text-slate-300">
+              Torre Elementa, Piso 10<br>
+              Zona Angelópolis, Puebla, Pue., México
+            </p>
+          </div>
+          <div class="bg-slate-800 rounded-xl p-6 ring-1 ring-slate-700">
+            <h3 class="font-semibold text-accent-400">Horario</h3>
+            <p class="mt-1 text-slate-300">
+              Lun–Vie 11:00 – 20:00<br>
+              Sáb 11:00 – 18:00 • Dom cerrado
+            </p>
+          </div>
+          <div class="bg-slate-800 rounded-xl p-6 ring-1 ring-slate-700">
+            <h3 class="font-semibold text-accent-400">Contacto</h3>
+            <p class="mt-1 text-slate-300">
+              <a href="mailto:contacto@timelesstreasures.com.mx" class="hover:text-accent-400">contacto@timelesstreasures.com.mx</a><br>
+              <a href="tel:+522221234567" class="hover:text-accent-400">+52 222 123 4567</a>
+            </p>
+          </div>
+        </div>
+
+        <form id="contactForm" class="mt-12 max-w-3xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
+          
+          <input type="text" name="empresa" id="empresa" class="hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
+          
+          <div class="sm:col-span-1">
+            <label for="nombre" class="block text-sm font-medium text-slate-300">Nombre</label>
+            <input id="nombre" name="nombre" type="text" class="mt-1 w-full rounded-lg bg-white/5 ring-1 ring-white/20 px-4 py-3 placeholder:text-white/50 focus:ring-accent-500 focus:ring-2" placeholder="Tu nombre" required>
+          </div>
+          <div class="sm:col-span-1">
+            <label for="email" class="block text-sm font-medium text-slate-300">Correo</label>
+            <input id="email" name="email" type="email" class="mt-1 w-full rounded-lg bg-white/5 ring-1 ring-white/20 px-4 py-3 placeholder:text-white/50 focus:ring-accent-500 focus:ring-2" placeholder="tu@correo.com" required>
+          </div>
+          <div class="sm:col-span-2">
+            <label for="mensaje" class="block text-sm font-medium text-slate-300">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="4" class="mt-1 w-full rounded-lg bg-white/5 ring-1 ring-white/20 px-4 py-3 placeholder:text-white/50 focus:ring-accent-500 focus:ring-2" placeholder="¿En qué podemos ayudarte?" required></textarea>
+          </div>
+          
+          <div class="sm:col-span-2">
+            <button type="submit" class="w-full sm:w-auto rounded-lg bg-white text-slate-900 font-semibold px-6 py-3 hover:bg-slate-200 transition-colors motion-safe">
+              Enviar Mensaje
+            </button>
+          </div>
+          <p id="formSuccess" class="sm:col-span-2 text-sm text-green-400 hidden">¡Gracias! Tu mensaje ha sido recibido. Te contactaremos pronto.</p>
+          <p id="formError" class="sm:col-span-2 text-sm text-red-400 hidden">Error. Por favor, revisa tu correo e intenta de nuevo.</p>
+        </form>
+
+        <div class="mt-12 max-w-4xl mx-auto h-80 rounded-xl bg-slate-800 flex items-center justify-center text-slate-400 text-center p-6 ring-1 ring-slate-700 overflow-hidden">
+          <div class="text-center">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 mx-auto text-slate-600"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" /><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" /></svg>
+            <iframe title="Mapa de ubicación" class="w-full h-72" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.000000000!2d-98.2300000!3d18.9900000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0000000000000000%3ATorre%20Elementa!2sPuebla!5e0!3m2!1ses-419!2smx!4v1680000000000"></iframe>
+            <p class="mt-4 text-lg font-medium text-slate-300">
+        Ubicación
+            </p>
+            <p class="mt-1 text-sm text-slate-400">
+              Ve a Google Maps, busca tu negocio, haz clic en "Compartir" > "Insertar un mapa" y pega el código <code>&lt;iframe&gt;</code> aquí.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <a 
+      href="https://wa.me/5212221234567" 
+      target="_blank" 
+      rel="noopener" 
+      class="fixed bottom-5 right-5 z-40 bg-green-500 hover:bg-green-600 text-white rounded-full p-3 shadow-soft" 
+      aria-label="Abrir chat en WhatsApp"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7"><path d="M20.52 3.48A11.94 11.94 0 0 0 12.01 0C5.39 0 .01 5.37.01 11.99c0 2.11.55 4.17 1.6 5.99L0 24l6.2-1.61a11.96 11.96 0 0 0 5.81 1.49h.01c6.62 0 11.99-5.38 11.99-12s-5.38-11.99-12-11.99Zm-8.5 20.5a10.2 10.2 0 0 1-5.2-1.43l-.37-.22-3.69.96.99-3.6-.24-.37a10.47 10.47 0 0 1-1.62-5.63c0-5.69 4.63-10.31 10.32-10.31 2.76 0 5.35 1.08 7.3 3.04a10.22 10.22 0 0 1 3.02 7.27c0 5.69-4.62 10.29-10.31 10.29Zm5.97-7.66c-.33-.17-1.95-.96-2.26-1.07-.3-.12-.52-.17-.74.17-.22.33-.86 1.07-1.05 1.3-.19.22-.39.25-.72.08-.33-.17-1.39-.51-2.64-1.64-.98-.87-1.64-1.94-1.83-2.27-.19-.33-.02-.51.15-.68.16-.16.33-.42.5-.64.17-.22.22-.37.33-.62.11-.25.06-.47-.03-.65-.09-.17-.74-1.78-1.01-2.44-.27-.65-.54-.56-.74-.57h-.63c-.22 0-.57.08-.87.39-.3.33-1.15 1.12-1.15 2.72 0 1.62 1.18 3.17 1.34 3.39.17.22 2.33 3.56 5.65 4.99.79.34 1.41.54 1.89.69.79.25 1.52.22 2.09.13.64-.09 1.95-.8 2.23-1.57.27-.78.27-1.44.19-1.57-.08-.14-.3-.22-.63-.39Z"/></svg>
+    </a>
+  </main>
+
+  <footer class="bg-slate-950 text-slate-400 py-16">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <p class="text-2xl font-display font-bold text-white">Timeless Treasures</p>
+      
+      <div class="mt-6 flex items-center justify-center gap-6 text-sm">
+        <a href="https://www.instagram.com/timelesstreasurespuebla" target="_blank" rel="noopener" class="hover:text-white inline-flex items-center gap-2" aria-label="Instagram">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm5 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm6.5.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z"/></svg>
+          Instagram
+        </a>
+        <a href="https://www.facebook.com/timelesstreasurespuebla" target="_blank" rel="noopener" class="hover:text-white inline-flex items-center gap-2" aria-label="Facebook">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5"><path d="M13 22v-8h3l1-4h-4V8a1 1 0 0 1 1-1h3V3h-3a5 5 0 0 0-5 5v2H6v4h3v8h4Z"/></svg>
+          Facebook
+        </a>
+        <a href="https://www.tiktok.com/@timelesstreasurespuebla" target="_blank" rel="noopener" class="hover:text-white inline-flex items-center gap-2" aria-label="TikTok">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5"><path d="M14 3a7 7 0 0 0 7 7V7.5A4.5 4.5 0 0 1 16.5 3H14Zm0 5.5v7.25a3.75 3.75 0 1 1-3.75-3.75c.26 0 .51.03.75.08V8.5A7.25 7.25 0 1 0 17 15.75V8.5h-3Z"/></svg>
+          TikTok
+        </a>
+      </div>
+      
+      <div class="mt-6 pt-6 border-t border-slate-700 text-xs">
+        <div class="flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
+          <span>© <span id="year"></span> Timeless Treasures.</span>
+          <span>Todos los derechos reservados.</span>
+          <a href="#" class="hover:text-white underline">Aviso de Privacidad</a>
+          <a href="#" class="hover:text-white underline">Términos y Condiciones</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"JewelryStore",
+    "name":"Timeless Treasures",
+    <!-- MODIFICADO: Ruta a tu imagen de logo local -->
+    "image":"images/LOGO.jpg",
+    "priceRange":"$$$$",
+    "address":{"@type":"PostalAddress","streetAddress":"Torre Elementa, Piso 10","addressLocality":"Puebla","addressRegion":"PUE","postalCode":"72190","addressCountry":"MX"},
+    "email":"contacto@timelesstreasures.com.mx",
+    "telephone":"+522221234567",
+    "openingHours":["Mo-Fr 11:00-20:00","Sa 11:00-18:00"],
+    "sameAs":["https://www.instagram.com/timelesstreasurespuebla","https://www.facebook.com/timelesstreasurespuebla","https://www.tiktok.com/@timelesstreasurespuebla"]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"¿Todas las piezas son auténticas y ofrecen garantía?","acceptedAnswer":{"@type":"Answer","text":"Absolutamente. Somos distribuidores autorizados y todas nuestras piezas son 100% auténticas. Ofrecemos garantía por escrito del fabricante y de nuestra tienda. El taller ofrece garantía sobre mano de obra."}},
+      {"@type":"Question","name":"¿Hacen piezas personalizadas o grabados?","acceptedAnswer":{"@type":"Answer","text":"Realizamos ajustes de talla y opciones de grabado láser y manual. Para diseños a medida (joyería), podemos cotizar sin compromiso con nuestros maestros orfebres."}},
+      {"@type":"Question","name":"¿Cuál es el tiempo de servicio del taller?","acceptedAnswer":{"@type":"Answer","text":"Ajustes menores (cambio de batería, ajuste de brazalete) pueden estar listos el mismo día. Mantenimientos completos o pulidos pueden tomar de 3 a 7 días hábiles, según la carga de trabajo y el diagnóstico de la pieza."}}
+    ]
+  }
+  </script>
+
+  <script>
+    // Año dinámico
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // --- Menú móvil accesible ---
+    const btnMenu = document.getElementById('btnMenu');
+    const mobileNav = document.getElementById('mobileNav');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+    
+    btnMenu?.addEventListener('click', () => {
+      const open = mobileNav.classList.toggle('hidden') === false;
+      btnMenu.setAttribute('aria-expanded', String(open));
+    });
+    // Cierra el menú al hacer clic en un enlace
+    mobileLinks.forEach(link => link.addEventListener('click', () => { 
+      mobileNav.classList.add('hidden'); 
+      btnMenu.setAttribute('aria-expanded','false'); 
+    }));
+
+    // --- Estilos de navegación (Directo en HTML para performance) ---
+    document.querySelectorAll('.nav-link').forEach(a => a.classList.add('text-slate-700','hover:text-slate-900','transition-colors','px-3','py-2','rounded-lg','hover:bg-slate-100','motion-safe'));
+    document.querySelectorAll('.mobile-link').forEach(a => a.classList.add('block','px-4','py-2','rounded-lg','hover:bg-slate-100','transition-colors','motion-safe'));
+
+    // --- Form de contacto (demo) + honeypot ---
+    const contactForm = document.getElementById('contactForm');
+    contactForm?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const honeypot = document.getElementById('empresa').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const successMsg = document.getElementById('formSuccess');
+      const errorMsg = document.getElementById('formError');
+      
+      // 1. Chequeo Honeypot
+      if (honeypot) return; // Bot detectado, no hacer nada
+      
+      // 2. Validación simple (puedes añadir más)
+      const isEmailValid = /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email);
+      
+      if (isEmailValid) {
+        // Simulación de envío exitoso
+        successMsg.classList.remove('hidden');
+        errorMsg.classList.add('hidden');
+        e.target.reset();
+        setTimeout(() => successMsg.classList.add('hidden'), 5000);
+      } else {
+        // Error
+        errorMsg.classList.remove('hidden');
+        successMsg.classList.add('hidden');
+      }
+    });
+
+    // --- Scroll Spy (IntersectionObserver) ---
+    try {
+      const sections = ['filosofia','destacados','taller','marcas','testimonios','faq','contacto'];
+      const navLinks = document.querySelectorAll('#mainNav a.nav-link');
+      const navMap = new Map(sections.map(id => [id, document.querySelector(`#mainNav a[href="#${id}"]`)]));
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          const id = entry.target.id;
+          const link = navMap.get(id);
+          
+          if (!link) return;
+          
+          if (entry.isIntersecting && entry.intersectionRatio > 0.1) {
+            // Es el "activo", quitar a todos los demás y poner a este
+            navLinks.forEach(l => l.classList.remove('bg-slate-100', 'text-slate-900'));
+            link.classList.add('bg-slate-100', 'text-slate-900');
+          } else {
+            // Deja de ser el activo
+            link.classList.remove('bg-slate-100', 'text-slate-900');
+          }
+        });
+      }, { 
+        // rootMargin: '-40% 0px -55% 0px', // Activa en el "medio" de la pantalla
+        threshold: 0.1
+      });
+
+      sections.forEach(id => { 
+        const el = document.getElementById(id); 
+        if (el) observer.observe(el); 
+      });
+    } catch (error) {
+      console.error("Error al iniciar IntersectionObserver (Scroll Spy):", error);
+    }
+  </script>
+</body>
+</html>
